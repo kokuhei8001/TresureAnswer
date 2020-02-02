@@ -181,9 +181,8 @@ public class GameManager : MonoBehaviour
             i++;
         }
 
-        //float seikairitu = hit / i * 100; //%表示 //iとhitがfloat型じゃないので変換できない
-        //StartCoroutine(MakeJhonChat("君の正解率は" + seikairitu + "%です", false));
-        StartCoroutine(MakeJhonChat("君の正解率は" + hit + "/" + i, false));
+        float seikairitu = (float)(hit) / i * 100; 
+        StartCoroutine(MakeJhonChat("君の正解率は" + seikairitu + "%", false));
 
         if (hit >= 0)
         {
