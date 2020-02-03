@@ -181,15 +181,19 @@ public class GameManager : MonoBehaviour
             i++;
         }
 
-        float seikairitu = (float)(hit) / i * 100; 
-        StartCoroutine(MakeJhonChat("君の正解率は" + seikairitu + "%", false));
+        float seikairitu = (float)(hit) / i * 100;
+        StartCoroutine(MakeJhonChat("君の正解率は" + (int)seikairitu + "%", false));
 
-        if (hit >= 0)
+        if (seikairitu == 100)
         {
-            //正解率が高かったら
+            //満点だったら褒めちぎる
+        }
+        else if (seikairitu > 50)
+        {
+            //正解率が高かったら（ギリ正解）
         }
         else
-        { 
+        {
             //正解率が低かったら
         }
     }
