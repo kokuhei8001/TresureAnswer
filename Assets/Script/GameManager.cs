@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator MakeJhonChat(string text , bool isquestion)
     {
         Tmp_Jhon_chat = Instantiate(Jhon_pre , transform.position , Quaternion.identity , parent);
-        Tmp_Jhon_chat.transform.localPosition = new Vector3(-45, 145, 0);
+        Tmp_Jhon_chat.transform.localPosition = new Vector3(-45, -60, 0);
         Text _text = Tmp_Jhon_chat.transform.Find("Jhon_text").GetComponent<Text>();
         _text.text = "";//初期化
 
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
         if (Tmp_YOU_answer == null)
         {
             Tmp_YOU_answer = Instantiate(YOU_pre, transform.position, Quaternion.identity, parent);
-            Tmp_YOU_answer.transform.localPosition = new Vector3(-45, 80, 0);
+            Tmp_YOU_answer.transform.localPosition = new Vector3(-45, -120, 0);
             Tmp_YOU_answer.transform.Find("YOU_text").GetComponent<Text>().text = text;
         }
         else
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
     public void MakeAnswerSelect(Question num)
     {
         Tmp_Select_answer = Instantiate(Answer_pre, transform.position, Quaternion.identity, parent);
-        Tmp_Select_answer.transform.localPosition = new Vector3(150,-75,0);
+        Tmp_Select_answer.transform.localPosition = new Vector3(150,-270,0);
 
         for (int i = 0; i < 4; i++)
         {
@@ -187,6 +187,8 @@ public class GameManager : MonoBehaviour
         if (seikairitu == 100)
         {
             //満点だったら褒めちぎる
+            var aaa = GetComponent<MakeEndChat>();
+            StartCoroutine(aaa.makechat(aaa.chat_list[0].name, aaa.chat_list[0].text));
         }
         else if (seikairitu > 50)
         {

@@ -9,7 +9,7 @@ public class MakeEndChat : MonoBehaviour
     [SerializeField] public Transform parent;
     [SerializeField] public List<UserDate> chat_list = new List<UserDate>();
     private int count = 0;
-    private Vector3 prev_pos = new Vector3(0,0,0);
+    private Vector3 prev_pos = new Vector3(50,-100,0);
 
     public IEnumerator makechat(string name , string text)
     {
