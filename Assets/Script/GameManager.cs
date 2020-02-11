@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject now_screen = null;
     [SerializeField]
-    private Vector2 screen_pos = new Vector2(1000,1000);
+    private Vector2 screen_pos = new Vector2(3000,3000);
 
     //チャット画面を切り替える関数
     public void change_screen(GameObject screen)
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         if (screen != now_screen)
         {
             screen.transform.position = now_screen.transform.position;
-            now_screen.transform.position = screen_pos;
+            now_screen.transform.localPosition = screen_pos;
 
             now_screen = screen;
         }
