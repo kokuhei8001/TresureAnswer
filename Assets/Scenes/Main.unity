@@ -723,6 +723,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 960335916720068597, guid: 65346447d03e132469896e8e5065b26b,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u570B\u90E8 \u8015\u5E73"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156591194828175953, guid: 65346447d03e132469896e8e5065b26b,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u3053\u306E\u56DE\u7B54\u30C1\u30E3\u30C3\u30C8\u306E\u5236\u4F5C\u3092\u62C5\u5F53\u3057\u307E\u3057\u305F\u3002\u3069\u3046\u3067\u3057\u305F\u304B\uFF1F\u697D\u3057\u3093\u3067\u3044\u305F\u3060\u3051\u305F\u3089\u5E78\u3044\u3067\u3059\u3002"
+      objectReference: {fileID: 0}
     - target: {fileID: 6080929594382742009, guid: 65346447d03e132469896e8e5065b26b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -742,16 +752,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 427.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 960335916720068597, guid: 65346447d03e132469896e8e5065b26b,
-        type: 3}
-      propertyPath: m_Text
-      value: "\u570B\u90E8 \u8015\u5E73"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156591194828175953, guid: 65346447d03e132469896e8e5065b26b,
-        type: 3}
-      propertyPath: m_Text
-      value: "\u3053\u306E\u56DE\u7B54\u30C1\u30E3\u30C3\u30C8\u306E\u5236\u4F5C\u3092\u62C5\u5F53\u3057\u307E\u3057\u305F\u3002\u3069\u3046\u3067\u3057\u305F\u304B\uFF1F\u697D\u3057\u3093\u3067\u3044\u305F\u3060\u3051\u305F\u3089\u5E78\u3044\u3067\u3059\u3002"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65346447d03e132469896e8e5065b26b, type: 3}
@@ -2333,31 +2333,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   question_list:
-  - ask_txt: "\u4E2D\u91CE\u5BB6\u306E\u9577\u5973\u306F\u3060\u308C\uFF1F"
+  - ask_txt: "\u6D1E\u7A9F\u306E\u5965\u306B\u306A\u306B\u304C\u3042\u3063\u305F\uFF1F"
     answer_Image:
-    - {fileID: 21300000, guid: 97d6902b5fe5f13449d3f8c9aee76504, type: 3}
-    - {fileID: 21300000, guid: 6fb272ba8a3d35d4fa969bd174b644e9, type: 3}
-    - {fileID: 21300000, guid: 8516f9af3aa82fb40aa5a9f1634847fc, type: 3}
-    - {fileID: 21300000, guid: 9634d14eb56385d409f175c72801b262, type: 3}
+    - {fileID: 21300000, guid: 790b23e6b55fd6b4788e19c326f08a69, type: 3}
+    - {fileID: 21300000, guid: f3de2f820004fd0488a8c0ff2d767ba4, type: 3}
+    - {fileID: 21300000, guid: 304b48d37f1d739428f13ec72750cfc4, type: 3}
+    - {fileID: 21300000, guid: 298f44b45e6a17342bcdfb2a4b579e20, type: 3}
     answer_text:
-    - "\u4E2D\u91CE\u3000\u4E00\u82B1"
-    - "\u4E2D\u91CE\u3000\u4E8C\u4E43"
-    - "\u4E2D\u91CE\u3000\u4E09\u4E45"
-    - "\u4E2D\u91CE\u3000\u56DB\u8449"
-  - ask_txt: "\u3055\u3063\u304D\u3044\u306A\u304B\u3063\u305F\u306E\u306F\u8AB0\uFF1F"
+    - "\u9752\u3044\u9271\u77F3"
+    - "\u8D64\u3044\u9271\u77F3"
+    - "\u5316\u77F3"
+    - "\u907A\u8DE1\u30FB\u67F1"
+  - ask_txt: "\u541B\u306E\u597D\u304D\u306A\u661F\u5EA7\u306F\uFF1F"
     answer_Image:
-    - {fileID: 21300000, guid: 6fb272ba8a3d35d4fa969bd174b644e9, type: 3}
-    - {fileID: 21300000, guid: 9634d14eb56385d409f175c72801b262, type: 3}
-    - {fileID: 21300000, guid: c6238cef44649e847b57e49f84587c99, type: 3}
-    - {fileID: 21300000, guid: 8516f9af3aa82fb40aa5a9f1634847fc, type: 3}
+    - {fileID: 21300000, guid: 1a6b75056985cd94b9526dd63a8b00e9, type: 3}
+    - {fileID: 21300000, guid: 8f89d3886812df54c8b1b4403a17faa6, type: 3}
+    - {fileID: 21300000, guid: a22954dcd167a8743a5b49dafc55eb66, type: 3}
+    - {fileID: 21300000, guid: 68dbe2f5dde32b945ba379f55f3b6de6, type: 3}
     answer_text:
-    - "\u306B\u306E"
-    - "\u3088\u3064\u3070"
-    - "\u3044\u3064\u304D"
-    - "\u307F\u304F"
+    - "\u5C71\u7F8A\u5EA7"
+    - "\u304A\u3068\u3081\u5EA7"
+    - "\u880D\u5EA7"
+    - "\u87F9\u5EA7"
   question_answer:
-  - "\u4E2D\u91CE\u3000\u4E00\u82B1"
-  - "\u3044\u3064\u304D"
+  - "\u9752\u3044\u9271\u77F3"
+  - "\u5C71\u7F8A\u5EA7"
   seikai:
   - "\u3088\u304F\u898B\u3064\u3051\u3066\u304F\u308C\u305F"
   - "\u541B\u306B\u983C\u3093\u3067\u3088\u304B\u3063\u305F\u3002"
@@ -2390,6 +2390,7 @@ MonoBehaviour:
   Tmp_Select_answer: {fileID: 0}
   novelSpeed: 0.15
   count: 0
+  nextchat_count_time: 1
 --- !u!114 &1725518244
 MonoBehaviour:
   m_ObjectHideFlags: 0

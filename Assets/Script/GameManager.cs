@@ -144,13 +144,14 @@ public class GameManager : MonoBehaviour
     //画面遷移にかかる時間とタイマースイッチ
     public bool count = false;
     private float timer = 0.0f;
+    public float nextchat_count_time = 1.0f;
 
     private void Update()
     {
         if (count)
         {
             timer += Time.deltaTime;
-            if (timer >= 2.0f)
+            if (timer >= nextchat_count_time)
             {
                 NextPage();
 
