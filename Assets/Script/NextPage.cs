@@ -5,18 +5,15 @@ using UnityEngine.UI;
 
 public class NextPage : MonoBehaviour
 {
-    private GameManager _gamemanager;
+    private ChatMooving chatMoov; 
 
     private void Start()
     {
-        _gamemanager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        chatMoov = GameObject.Find("GameManager").GetComponent<ChatMooving>();
     }
 
     public void OnClick()
     {
-        _gamemanager.SaveAnswer(_gamemanager.Tmp_YOU_answer.transform.Find("YOU_text").GetComponent<Text>().text);
-
-        Destroy(_gamemanager.Tmp_Select_answer);
-        _gamemanager.count = true;
+        chatMoov.Next();
     }
 }

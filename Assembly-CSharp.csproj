@@ -67,6 +67,7 @@
     <Compile Include="Assets\ChatMooving.cs" />
     <Compile Include="Assets\MakeChat.cs" />
     <Compile Include="Assets\MakeEndChat.cs" />
+    <Compile Include="Assets\NextPagebutton.cs" />
     <Compile Include="Assets\Script\Answer_button.cs" />
     <Compile Include="Assets\Script\Button.cs" />
     <Compile Include="Assets\Script\Chat_screen.cs" />

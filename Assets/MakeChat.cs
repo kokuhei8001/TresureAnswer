@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class MakeChat : MonoBehaviour
 {
-    [SerializeField] private Transform originObj;
-    [SerializeField] private GameObject JhonPre;
-    [SerializeField] private GameObject YouPre;
-    [SerializeField] private GameObject AnswerPre;
+    private ChatMooving chatMoov;
+
+    [SerializeField] private Transform originObj = null;
+    [SerializeField] private GameObject JhonPre = null;
+    [SerializeField] private GameObject YouPre = null;
+    [SerializeField] private GameObject AnswerPre = null;
 
     [SerializeField] private Vector3 JhonPos = new Vector3(-45,-60,0);
     [SerializeField] private Vector3 YouPos = new Vector3(-45, -120, 0);
@@ -19,6 +21,11 @@ public class MakeChat : MonoBehaviour
     [HideInInspector] public GameObject Tmp_Jhon_chat = null;
     [HideInInspector] public GameObject Tmp_You_chat = null;
     [HideInInspector] public GameObject Tmp_select = null;
+
+    private void Awake()
+    {
+        chatMoov = GetComponent<ChatMooving>();
+    }
 
     //Jhonのチャットを作る
     public IEnumerator MakeJhonChat(string text)
@@ -37,8 +44,7 @@ public class MakeChat : MonoBehaviour
         }
 
         //next処理
-
-
+        chatMoov.Next();
     }
 
     //YOUのチャットを作る
@@ -70,6 +76,7 @@ public class MakeChat : MonoBehaviour
 
             obj.GetComponent<Image>().sprite = image[i];
             obj.GetComponent<Answer_button>().Answer = text[i];
+            obj.GetComponent<Answer_button>().answer_num = i;
         }
     }
 }

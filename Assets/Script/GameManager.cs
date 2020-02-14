@@ -137,7 +137,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //NewPage(page);
+        ChatMooving chatMoov = GetComponent<ChatMooving>();
+
+        chatMoov.Next();
     }
 
 
