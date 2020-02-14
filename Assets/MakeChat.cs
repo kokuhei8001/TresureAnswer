@@ -1,0 +1,75 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class MakeChat : MonoBehaviour
+{
+    [SerializeField] private Transform originObj;
+    [SerializeField] private GameObject JhonPre;
+    [SerializeField] private GameObject YouPre;
+    [SerializeField] private GameObject AnswerPre;
+
+    [SerializeField] private Vector3 JhonPos = new Vector3(-45,-60,0);
+    [SerializeField] private Vector3 YouPos = new Vector3(-45, -120, 0);
+    [SerializeField] private Vector3 AnswerPos = new Vector3(150, -270, 0);
+
+    [SerializeField] private float novelSpeed = 0.1f; //文字が表示される速度
+
+    [HideInInspector] public GameObject Tmp_Jhon_chat = null;
+    [HideInInspector] public GameObject Tmp_You_chat = null;
+    [HideInInspector] public GameObject Tmp_select = null;
+
+    //Jhonのチャットを作る
+    public IEnumerator MakeJhonChat(string text)
+    {
+        Tmp_Jhon_chat = Instantiate(JhonPre, transform.position, Quaternion.identity, originObj);
+        Tmp_Jhon_chat.transform.localPosition = JhonPos;
+        Text _text = Tmp_Jhon_chat.transform.Find("Jhon_text").GetComponent<Text>(); 
+        _text.text = "";//初期化
+
+        int messageCount = 0;
+        while (text.Length > messageCount)
+        {
+            _text.text += text[messageCount];
+            messageCount++;
+            yield return new WaitForSeconds(novelSpeed);
+        }
+
+        //next処理
+
+
+    }
+
+    //YOUのチャットを作る
+    public void MakeYOUChat(string text)
+    {
+        if (Tmp_You_chat == null)
+        {
+            Tmp_You_chat = Instantiate(YouPre, transform.position, Quaternion.identity, originObj);
+            Tmp_You_chat.transform.localPosition = YouPos;
+            Tmp_You_chat.transform.Find("YOU_text").GetComponent<Text>().text = text;
+        }
+        else
+        {
+            Tmp_You_chat.transform.Find("YOU_text").GetComponent<Text>().text = text;
+        }
+    }
+
+
+    //回答の選択肢を作る
+    public void MakeAnswerSelect( Sprite[] image, string[] text)
+    {
+        Tmp_select = Instantiate(AnswerPre, transform.position, Quaternion.identity, originObj);
+        Tmp_select.transform.localPosition = AnswerPos;
+
+        for (int i = 0; i < 4; i++)
+        {
+            string name = "Answer" + i.ToString();
+            var obj = Tmp_select.transform.Find(name);
+
+            obj.GetComponent<Image>().sprite = image[i];
+            obj.GetComponent<Answer_button>().Answer = text[i];
+        }
+    }
+}

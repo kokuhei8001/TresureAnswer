@@ -7,7 +7,12 @@ public class TestMana : MonoBehaviour
 {
     private void Start()
     {
-        var aaa = GetComponent<MakeEndChat>();
-        StartCoroutine(aaa.makechat(aaa.chat_list[0].name , aaa.chat_list[0].text));
+        var bbb = GetComponent<AnswerChat>();
+        var aaa = GetComponent<MakeChat>();
+
+        StartCoroutine(aaa.MakeJhonChat(bbb.Question_root[0].question_text));
+
+        aaa.MakeAnswerSelect(bbb.Question_root[0].image, bbb.Question_root[0].text);
+
     }
 }

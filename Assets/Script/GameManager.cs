@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        NewPage(page);
+        //NewPage(page);
     }
 
 
