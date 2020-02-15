@@ -73,7 +73,6 @@
     <Compile Include="Assets\Script\Chat_screen.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\NextPage.cs" />
-    <Compile Include="Assets\Script\Question.cs" />
     <Compile Include="Assets\Script\TestMana.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/UnityProject/TresureAnswer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

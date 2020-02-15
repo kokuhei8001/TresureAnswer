@@ -723,16 +723,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 960335916720068597, guid: 65346447d03e132469896e8e5065b26b,
-        type: 3}
-      propertyPath: m_Text
-      value: "\u570B\u90E8 \u8015\u5E73"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156591194828175953, guid: 65346447d03e132469896e8e5065b26b,
-        type: 3}
-      propertyPath: m_Text
-      value: "\u3053\u306E\u56DE\u7B54\u30C1\u30E3\u30C3\u30C8\u306E\u5236\u4F5C\u3092\u62C5\u5F53\u3057\u307E\u3057\u305F\u3002\u3069\u3046\u3067\u3057\u305F\u304B\uFF1F\u697D\u3057\u3093\u3067\u3044\u305F\u3060\u3051\u305F\u3089\u5E78\u3044\u3067\u3059\u3002"
-      objectReference: {fileID: 0}
     - target: {fileID: 6080929594382742009, guid: 65346447d03e132469896e8e5065b26b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -752,6 +742,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 427.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 960335916720068597, guid: 65346447d03e132469896e8e5065b26b,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u570B\u90E8 \u8015\u5E73"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156591194828175953, guid: 65346447d03e132469896e8e5065b26b,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u3053\u306E\u56DE\u7B54\u30C1\u30E3\u30C3\u30C8\u306E\u5236\u4F5C\u3092\u62C5\u5F53\u3057\u307E\u3057\u305F\u3002\u3069\u3046\u3067\u3057\u305F\u304B\uFF1F\u697D\u3057\u3093\u3067\u3044\u305F\u3060\u3051\u305F\u3089\u5E78\u3044\u3067\u3059\u3002"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65346447d03e132469896e8e5065b26b, type: 3}
@@ -2296,9 +2296,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1725518241}
-  - component: {fileID: 1725518243}
   - component: {fileID: 1725518242}
+  - component: {fileID: 1725518245}
+  - component: {fileID: 1725518246}
   - component: {fileID: 1725518244}
+  - component: {fileID: 1725518243}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2329,41 +2331,80 @@ MonoBehaviour:
   m_GameObject: {fileID: 1725518240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501fe5b0b75274a4a9b80a157fd7fa28, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ec5a0787d1ecdc449833c7272a1cf25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question_list:
-  - ask_txt: "\u6D1E\u7A9F\u306E\u5965\u306B\u306A\u306B\u304C\u3042\u3063\u305F\uFF1F"
-    answer_Image:
-    - {fileID: 21300000, guid: 790b23e6b55fd6b4788e19c326f08a69, type: 3}
-    - {fileID: 21300000, guid: f3de2f820004fd0488a8c0ff2d767ba4, type: 3}
-    - {fileID: 21300000, guid: 304b48d37f1d739428f13ec72750cfc4, type: 3}
-    - {fileID: 21300000, guid: 298f44b45e6a17342bcdfb2a4b579e20, type: 3}
-    answer_text:
-    - "\u9752\u3044\u9271\u77F3"
-    - "\u8D64\u3044\u9271\u77F3"
-    - "\u5316\u77F3"
-    - "\u907A\u8DE1\u30FB\u67F1"
-  - ask_txt: "\u541B\u306E\u597D\u304D\u306A\u661F\u5EA7\u306F\uFF1F"
-    answer_Image:
+  Question_root:
+  - question_text: "\u6765\u3066\u304F\u308C\u308B\u3063\u3066\u4FE1\u3058\u3066\u3044\u305F\u305C\u3002\u5B9D\u306E\u96A0\u3055\u308C\u305F\u6D1E\u7A9F\u306B\u306F\u3001\u5371\u967A\u306A\u7F60\u306F\u3042\u3063\u305F\u304B\uFF1F"
+    text:
+    - "\u30C8\u30E9\u30D0\u30B5\u30DF\u304C\u3042\u3063\u305F\u3002\u8DB3\u5143\u306B\u6CE8\u610F\u3057\u308D\u3002"
+    - "\u58C1\u304B\u3089\u91DD\u304C\u51FA\u305F\u3002\u3080\u3084\u307F\u306B\u89E6\u308C\u308B\u306A\u3002"
+    - "\u5927\u304D\u306A\u6249\u304C\u3042\u3063\u305F\u3002\u30B9\u30A4\u30C3\u30C1\u3067\u958B\u304F\u305E\u3002"
+    - "\u4F55\u3082\u306A\u304B\u3063\u305F\u3002\u5B89\u5FC3\u3057\u3066\u3044\u3051\u3002"
+    image:
+    - {fileID: 21300000, guid: 204919adf88666a4fa7f8faef41654e7, type: 3}
+    - {fileID: 21300000, guid: e414c11a3cb103e4b9d298594d3a4215, type: 3}
+    - {fileID: 21300000, guid: 58cd9107397dd5f4383e1c8892775320, type: 3}
+    - {fileID: 21300000, guid: e16429f0c6a0c904093db2753d267729, type: 3}
+    answer_num: 0
+    clear_txet: "\u5371\u306A\u304B\u3063\u305F\u3001\u541B\u306E\u52A9\u8A00\u304C\u306A\u3051\u308C\u3070\u9AA8\u3092\uFF12\uFF5E\uFF13\u672C\u6301\u3063\u3066\u3044\u304B\u308C\u308B\u3068\u3053\u308D\u3060\u3063\u305F\u3088\u3002"
+    over_txet: "\u3046\u3046\u309B\u3049\u3042\uFF01\u808B\u9AA8\u304C\u4F55\u672C\u304B\u30FB\u30FB\u30FBOK\u3001\u307E\u3060\u5927\u4E08\u592B\u3060\u3002\u3060\u304C\u6B21\u306F\u983C\u3080\u305C\u3002"
+  - question_text: "\u4F55\u304B\u306F\u3063\u304D\u308A\u3057\u305F\u7279\u5FB4\u306F\u306A\u304B\u3063\u305F\u304B\uFF1F\u4F8B\u3048\u3070\u30A8\u30F3\u30D6\u30EC\u30E0\u3068\u304B\u30FB\u30FB\u30FB"
+    text:
+    - "\u5C71\u7F8A\u5EA7"
+    - "\u4E59\u5973\u5EA7"
+    - "\u880D\u5EA7"
+    - "\u87F9\u5EA7"
+    image:
     - {fileID: 21300000, guid: 1a6b75056985cd94b9526dd63a8b00e9, type: 3}
     - {fileID: 21300000, guid: 8f89d3886812df54c8b1b4403a17faa6, type: 3}
     - {fileID: 21300000, guid: a22954dcd167a8743a5b49dafc55eb66, type: 3}
     - {fileID: 21300000, guid: 68dbe2f5dde32b945ba379f55f3b6de6, type: 3}
-    answer_text:
-    - "\u5C71\u7F8A\u5EA7"
-    - "\u304A\u3068\u3081\u5EA7"
-    - "\u880D\u5EA7"
-    - "\u87F9\u5EA7"
-  question_answer:
-  - "\u9752\u3044\u9271\u77F3"
-  - "\u5C71\u7F8A\u5EA7"
-  seikai:
-  - "\u3088\u304F\u898B\u3064\u3051\u3066\u304F\u308C\u305F"
-  - "\u541B\u306B\u983C\u3093\u3067\u3088\u304B\u3063\u305F\u3002"
-  fuseikai:
-  - "\u305D\u3046\u304B"
-  - "\u898B\u3064\u304B\u3089\u306A\u304B\u3063\u305F\u306E\u306A\u3089\u4ED5\u65B9\u304C\u306A\u3044\u3002"
+    answer_num: 0
+    clear_txet: "\u541B\u306E\u8A00\u3063\u305F\u3068\u304A\u308A\u3060\uFF01\u30C9\u30AD\u30C9\u30AD\u3057\u3066\u80F8\u9AA8\u304C\u9AD8\u9CF4\u3063\u3066\u3044\u308B\u3088\u3002"
+    over_txet: "\u3053\u308C\u306F\u30FB\u30FB\u30FB\u307E\u3041\u3001\u4E07\u80FD\u306A\u4EBA\u9593\u306A\u3069\u3044\u306A\u3044\u304B\u3089\u306A\u3002\u661F\u5EA7\u3092\u77E5\u3089\u306A\u304F\u3066\u3082\u5927\u4E08\u592B\u3060\u3002"
+  - question_text: "\u4ED6\u306B\u5370\u8C61\u306B\u6B8B\u3063\u3066\u3044\u308B\u3082\u306E\u306F\u3042\u308B\u304B\u3044\uFF1F"
+    text:
+    - "\u8D64\u3044\u9271\u77F3"
+    - "\u5316\u77F3"
+    - "\u9752\u3044\u9271\u77F3"
+    - "\u67F1\u3084\u907A\u8DE1"
+    image:
+    - {fileID: 21300000, guid: f3de2f820004fd0488a8c0ff2d767ba4, type: 3}
+    - {fileID: 21300000, guid: 304b48d37f1d739428f13ec72750cfc4, type: 3}
+    - {fileID: 21300000, guid: 790b23e6b55fd6b4788e19c326f08a69, type: 3}
+    - {fileID: 21300000, guid: 298f44b45e6a17342bcdfb2a4b579e20, type: 3}
+    answer_num: 0
+    clear_txet: "\u7D20\u6674\u3089\u3057\u3044\uFF01\u76EE\u7684\u306E\u5B9D\u307E\u3067\u3082\u3046\u5C11\u3057\u3060\u306A\uFF01"
+    over_txet: "\u305D\u3093\u306A\u7269\u3042\u3063\u305F\u304B\uFF1F\u4FFA\u306B\u306F\u898B\u3064\u3051\u3089\u308C\u306A\u304B\u3063\u305F\u306A\u30FB\u30FB\u30FB"
+  - question_text: "\u3069\u3063\u3061\u306E\u65B9\u89D2\u306B\u5411\u3044\u3066\u3044\u305F\u304B\u3001\u899A\u3048\u3066\u3044\u308B\u304B\uFF1F"
+    text:
+    - "\u5317"
+    - "\u5357"
+    - "\u897F"
+    - "\u6771"
+    image:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    answer_num: 0
+    clear_txet: "\u30A2\u30E1\u30A4\u30B8\u30F3\u30B0\uFF01\u304A\u5B9D\u307E\u3067\u4E00\u6B69\u3060\uFF01"
+    over_txet: "\u541B\u306F\u65B9\u5411\u97F3\u75F4\u306E\u3088\u3046\u3060\u306A\u30FB\u30FB\u30FB"
+  - question_text: "\u304A\u5B9D\u306E\u3042\u308B\u6D1E\u7A9F\u306F\u30FB\u30FB\u30FB\uFF01\uFF1F"
+    text:
+    - "\u7D05\u7389\u6D1E\u7A9F"
+    - "\u864E\u76EE\u6D1E\u7A9F"
+    - "\u85CD\u7389\u6D1E\u7A9F"
+    - "\u6DF7\u5408\u6D1E\u7A9F"
+    image:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    answer_num: 0
+    clear_txet: "\u30D5\u30A1\u30F3\u30BF\u30B9\u30C6\u30A3\u30C3\u30AF\uFF01\uFF01\u7D04\u675F\u901A\u308A\u3001\u5831\u916C\u3092\u6E21\u305D\u3046\u3002\u3067\u306F\u3001\u307E\u305F\u4F1A\u3046\u65E5\u307E\u3067\uFF01"
+    over_txet: "\u6B8B\u5FF5\u3060\u304C\u3001\u304A\u5B9D\u306F\u898B\u3064\u3051\u3089\u308C\u306A\u304B\u3063\u305F\u30FB\u30FB\u30FB\u3060\u304C\u3001\u6B21\u3053\u305D\u306F\u624B\u306B\u5165\u308C\u3066\u898B\u305B\u3088\u3046\uFF01\u541B\u306E\u5065\u95D8\u306B\u611F\u8B1D\u3059\u308B\u3002\u307E\u305F\u9022\u3046\u65E5\u307E\u3067\uFF01"
 --- !u!114 &1725518243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2378,19 +2419,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   now_screen: {fileID: 1421092939}
   screen_pos: {x: 1000, y: 1000}
-  parent: {fileID: 1421092940}
-  Jhon_pre: {fileID: 3497665216601560644, guid: f5dd10f9553497a40b3f9317fccccefe,
-    type: 3}
-  YOU_pre: {fileID: 2463470630637279459, guid: 76ea1b85b2497c24abc2c9c205f4ca16, type: 3}
-  Answer_pre: {fileID: 7287955128341799722, guid: 474126002b6b8814f8848d51157007d5,
-    type: 3}
-  question_list: []
-  Answer: []
-  Tmp_YOU_answer: {fileID: 0}
-  Tmp_Select_answer: {fileID: 0}
-  novelSpeed: 0.15
-  count: 0
-  nextchat_count_time: 1
 --- !u!114 &1725518244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2416,6 +2444,52 @@ MonoBehaviour:
     text: "\u3082\u3046\u30B3\u30E1\u30F3\u30C8\u304C"
   - name: EEE
     text: "\u601D\u3044\u3064\u304B\u306A\u3044\u3088"
+--- !u!114 &1725518245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725518240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b39cc1387e55b4584813a52ac4fdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originObj: {fileID: 1421092940}
+  JhonPre: {fileID: 3497665216601560644, guid: f5dd10f9553497a40b3f9317fccccefe, type: 3}
+  YouPre: {fileID: 2463470630637279459, guid: 76ea1b85b2497c24abc2c9c205f4ca16, type: 3}
+  AnswerPre: {fileID: 7287955128341799722, guid: 474126002b6b8814f8848d51157007d5,
+    type: 3}
+  NextButtonPre: {fileID: 293311997821260276, guid: 75597282311f3b74eb253defaf5f7716,
+    type: 3}
+  JhonPos: {x: -45, y: -60, z: 0}
+  YouPos: {x: -45, y: -120, z: 0}
+  AnswerPos: {x: 150, y: -270, z: 0}
+  NextButtonPos: {x: 400, y: -400, z: 0}
+  novelSpeed: 0.1
+  Tmp_Jhon_chat: {fileID: 0}
+  Tmp_You_chat: {fileID: 0}
+  Tmp_select: {fileID: 0}
+--- !u!114 &1725518246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725518240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c03421323e2bc244b03b606177db36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  question_root: []
+  makeChat: {fileID: 0}
+  moovSpeed: 1
+  now_status: 0
+  players_answer: 0
+  count: 0
+  nextchat_count_time: 1
 --- !u!1 &1742087067
 GameObject:
   m_ObjectHideFlags: 0

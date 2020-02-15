@@ -11,10 +11,12 @@ public class MakeChat : MonoBehaviour
     [SerializeField] private GameObject JhonPre = null;
     [SerializeField] private GameObject YouPre = null;
     [SerializeField] private GameObject AnswerPre = null;
+    [SerializeField] private GameObject NextButtonPre = null;
 
     [SerializeField] private Vector3 JhonPos = new Vector3(-45,-60,0);
     [SerializeField] private Vector3 YouPos = new Vector3(-45, -120, 0);
     [SerializeField] private Vector3 AnswerPos = new Vector3(150, -270, 0);
+    [SerializeField] private Vector3 NextButtonPos = new Vector3(400, -400, 0);
 
     [SerializeField] private float novelSpeed = 0.1f; //文字が表示される速度
 
@@ -78,5 +80,11 @@ public class MakeChat : MonoBehaviour
             obj.GetComponent<Answer_button>().Answer = text[i];
             obj.GetComponent<Answer_button>().answer_num = i;
         }
+    }
+
+    public void MakeNextButton()
+    {
+        var obj = Instantiate(NextButtonPre, transform.position, Quaternion.identity, originObj);
+        obj.transform.localPosition = NextButtonPos;
     }
 }

@@ -13,11 +13,10 @@ public enum Status
 
 public class ChatMooving : MonoBehaviour
 {
-
     [HideInInspector] public List<Root> question_root = new List<Root>();
     [HideInInspector] public MakeChat makeChat;
 
-    [SerializeField] private float moovSpeed = 1.0f;  //次のチャットが表示されるまでの時間
+    //[SerializeField] private float moovSpeed = 1.0f;  //次のチャットが表示されるまでの時間
 
     [HideInInspector] public Status now_status = Status.None;
 
@@ -25,24 +24,7 @@ public class ChatMooving : MonoBehaviour
     [HideInInspector] public int players_answer = 0; 
     private int clear_count = 0;  // プレイヤーが正解した数
 
-    /*
-     
-     ＝＝フロー図＝＝
-     
-    ジョンの質問
-        (瞬間表示)
-
-    選択肢の表示
-        (瞬時表示)
-
-    あなたの回答を送信
-        (moovSpeed)
-
-    ジョンによる成否判定チャット
-        (次へボタン？時間？)
-     */
-
-    private void Start()
+    private void Awake()
     {
         makeChat = GetComponent<MakeChat>();
     }
@@ -85,6 +67,8 @@ public class ChatMooving : MonoBehaviour
 
             case Status.Action:
                 page++;
+
+                makeChat.MakeNextButton();
 
                 now_status = Status.None;
                 break;

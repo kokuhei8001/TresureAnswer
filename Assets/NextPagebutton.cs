@@ -13,5 +13,7 @@ public class NextPagebutton : MonoBehaviour
 
         Destroy(makeChat.Tmp_Jhon_chat);
         chatMoov.Next();
+
+        Destroy(this.gameObject);
     }
 }
