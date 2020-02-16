@@ -723,6 +723,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 960335916720068597, guid: 65346447d03e132469896e8e5065b26b,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u570B\u90E8 \u8015\u5E73"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156591194828175953, guid: 65346447d03e132469896e8e5065b26b,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u3053\u306E\u56DE\u7B54\u30C1\u30E3\u30C3\u30C8\u306E\u5236\u4F5C\u3092\u62C5\u5F53\u3057\u307E\u3057\u305F\u3002\u3069\u3046\u3067\u3057\u305F\u304B\uFF1F\u697D\u3057\u3093\u3067\u3044\u305F\u3060\u3051\u305F\u3089\u5E78\u3044\u3067\u3059\u3002"
+      objectReference: {fileID: 0}
     - target: {fileID: 6080929594382742009, guid: 65346447d03e132469896e8e5065b26b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -742,16 +752,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 427.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 960335916720068597, guid: 65346447d03e132469896e8e5065b26b,
-        type: 3}
-      propertyPath: m_Text
-      value: "\u570B\u90E8 \u8015\u5E73"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156591194828175953, guid: 65346447d03e132469896e8e5065b26b,
-        type: 3}
-      propertyPath: m_Text
-      value: "\u3053\u306E\u56DE\u7B54\u30C1\u30E3\u30C3\u30C8\u306E\u5236\u4F5C\u3092\u62C5\u5F53\u3057\u307E\u3057\u305F\u3002\u3069\u3046\u3067\u3057\u305F\u304B\uFF1F\u697D\u3057\u3093\u3067\u3044\u305F\u3060\u3051\u305F\u3089\u5E78\u3044\u3067\u3059\u3002"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65346447d03e132469896e8e5065b26b, type: 3}
@@ -2467,7 +2467,7 @@ MonoBehaviour:
   YouPos: {x: -45, y: -120, z: 0}
   AnswerPos: {x: 150, y: -270, z: 0}
   NextButtonPos: {x: 400, y: -400, z: 0}
-  novelSpeed: 0.1
+  novelSpeed: 0
   Tmp_Jhon_chat: {fileID: 0}
   Tmp_You_chat: {fileID: 0}
   Tmp_select: {fileID: 0}
@@ -2485,8 +2485,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question_root: []
   makeChat: {fileID: 0}
-  moovSpeed: 1
   now_status: 0
+  page: 4
   players_answer: 0
   count: 0
   nextchat_count_time: 1

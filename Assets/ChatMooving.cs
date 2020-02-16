@@ -7,7 +7,8 @@ public enum Status
     None,
     Question,
     Answer,
-    Action
+    Action,
+    End
 }
 
 
@@ -20,7 +21,7 @@ public class ChatMooving : MonoBehaviour
 
     [HideInInspector] public Status now_status = Status.None;
 
-    private int page = 0; // 現在の質問数
+    [SerializeField] private int page = 0; // 現在の質問数(デバッグ用にinspectorに表示させる。)
     [HideInInspector] public int players_answer = 0; 
     private int clear_count = 0;  // プレイヤーが正解した数
 
@@ -34,8 +35,16 @@ public class ChatMooving : MonoBehaviour
         switch (now_status)
         {
             case Status.None:
-                StartCoroutine(makeChat.MakeJhonChat(question_root[page].question_text));
 
+                if (page < question_root.Count)
+                {
+                    StartCoroutine(makeChat.MakeJhonChat(question_root[page].question_text));
+                }
+                else
+                {
+                    now_status = Status.End;
+                    Next();//デバッグログを表示させるよう
+                }
                 now_status = Status.Question;
                 break;
 
@@ -72,12 +81,12 @@ public class ChatMooving : MonoBehaviour
 
                 now_status = Status.None;
                 break;
+
+            case Status.End:
+                Debug.Log("ゲーム終了");
+                break;
         }
     }
-
-
-
-
 
 
     //画面遷移にかかる時間とタイマースイッチ
