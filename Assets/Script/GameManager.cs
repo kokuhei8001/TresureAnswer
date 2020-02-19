@@ -29,10 +29,43 @@ public class GameManager : MonoBehaviour
 
 
     ChatMooving chatMoov = null;
+    AudioSource audioSouce = null;
 
     private void Start()
     {
         chatMoov = transform.GetComponent<ChatMooving>();
         chatMoov.Next();
+
+        audioSouce = GetComponent<AudioSource>();
     }
+
+    //シーンをリロードするための処理
+    [SerializeField]
+    private string Scene1 = null;
+    [SerializeField]
+    private string Scene2 = null;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (Scene1 != null)
+            {
+                SceneManager.LoadScene(Scene1);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (Scene2 != null)
+            {
+                SceneManager.LoadScene(Scene2);
+            }
+        }
+    }
+
+    public void AudioPlay(AudioClip sound)
+    {
+        audioSouce.PlayOneShot(sound);
+    }
+
 }

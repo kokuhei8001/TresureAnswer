@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class NextPage : MonoBehaviour
 {
-    private ChatMooving chatMoov; 
+    private ChatMooving chatMoov;
+
+    [SerializeField] private AudioClip sound1 = null;
 
     private void Start()
     {
@@ -14,6 +16,7 @@ public class NextPage : MonoBehaviour
 
     public void OnClick()
     {
+        GameObject.Find("GameManager").GetComponent<GameManager>().AudioPlay(sound1);
         chatMoov.Next();
     }
 }
