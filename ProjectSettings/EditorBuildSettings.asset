@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Root1.unity
     guid: bdd4031429294fd489f4ca4ebc24e6d2
   - enabled: 1
-    path: Assets/Scenes/Root2.unity
-    guid: 3105c9a29c33dd247ac17427631c5387
-  - enabled: 1
     path: Assets/Scenes/Ideling.unity
     guid: 82fda93071bba7444ba9de0fbe1498e1
+  - enabled: 1
+    path: Assets/Scenes/Root2.unity
+    guid: e2e42b21b8723aa4ebcf6d087468a345
   m_configObjects: {}
