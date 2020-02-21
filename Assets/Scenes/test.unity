@@ -452,10 +452,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1967254953}
-  - component: {fileID: 1967254955}
-  - component: {fileID: 1967254956}
-  - component: {fileID: 1967254957}
-  - component: {fileID: 1967254958}
+  - component: {fileID: 1967254952}
+  - component: {fileID: 1967254954}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -463,6 +461,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1967254952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967254951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8cd5c7042a02d47bbf590c817a235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatPre: {fileID: 7693683993751939809, guid: d77cd606aa71d0f4bbf3e90e46fb86ca, type: 3}
+  parent: {fileID: 2020644447}
+  chat_list:
+  - name: "\u3044\u3061\u304B"
+    text: "\u3053\u3093\u306A\u304B\u3093\u3058"
+  - name: "\u306B\u306E"
+    text: "\u3067\u3060\u3044\u3058\u3087\u3046\u3076\u304B\u306A"
+  - name: "\u307F\u304F"
+    text: "\u3082\u3046\u305D\u308D\u305D\u308D"
+  - name: "\u3088\u3064\u3070"
+    text: "\u3053\u3081\u3093\u3068\u304C"
+  - name: "\u3044\u3064\u304D"
+    text: "\u601D\u3044\u3064\u304B\u306A\u3044\u3088"
+  - name: "\u306F\u3044"
+    text: "\u306D\u305F\u304E\u308C"
 --- !u!4 &1967254953
 Transform:
   m_ObjectHideFlags: 0
@@ -477,7 +502,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1967254955
+--- !u!114 &1967254954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -486,108 +511,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967254951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec5a0787d1ecdc449833c7272a1cf25, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c53e39359a2e8e4a9e8866dca4c53b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Question_root:
-  - question_text: "\u6765\u3066\u304F\u308C\u308B\u3063\u3066\u4FE1\u3058\u3066\u305F\u305C\u3002\u5B9D\u306E\u96A0\u3055\u308C\u305F\u6D1E\u7A9F\u306B\u5371\u967A\u306A\u7F60\u306F\u3042\u3063\u305F\u304B\uFF1F"
-    text:
-    - "\u30C8\u30E9\u30D0\u30B5\u30DF\u304C\u3042\u3063\u305F\u3002\u8DB3\u5143\u306B\u6CE8\u610F\u3057\u308D\u3002"
-    - "\u58C1\u304B\u3089\u91DD\u304C\u51FA\u3066\u304D\u305F\u3002\u3080\u3084\u307F\u306B\u89E6\u308B\u306A\u3002"
-    - "\u5927\u304D\u306A\u6249\u304C\u3042\u3063\u305F\u3002\u30B9\u30A4\u30C3\u30C1\u3067\u958B\u304F\u305E\u3002"
-    - "\u4F55\u3082\u306A\u304B\u3063\u305F\u3002\u5B89\u5FC3\u3057\u3066\u3044\u3051\u3002"
-    image:
-    - {fileID: 21300000, guid: 204919adf88666a4fa7f8faef41654e7, type: 3}
-    - {fileID: 21300000, guid: e414c11a3cb103e4b9d298594d3a4215, type: 3}
-    - {fileID: 21300000, guid: 58cd9107397dd5f4383e1c8892775320, type: 3}
-    - {fileID: 21300000, guid: e16429f0c6a0c904093db2753d267729, type: 3}
-    answer_num: 1
-    clear_txet: "\u5371\u306A\u304B\u3063\u305F\u3001\u541B\u306E\u52A9\u8A00\u304C\u306A\u3051\u308C\u30702~3\u672C\u9AA8\u3092\u6301\u3063\u3066\u3044\u304B\u308C\u308B\u3068\u3053\u308D\u3060\u3063\u305F\u3088\u3002"
-    over_txet: "\u3046\u3046\u309B\u3049\u3042\uFF01\u808B\u9AA8\u304C\u4F55\u672C\u304B\u30FB\u30FB\u30FBOK\u3001\u307E\u3060\u5927\u4E08\u592B\u3060\u3002\u3060\u304C\u6B21\u306F\u983C\u3080\u305C\u3002"
-  - question_text: "\u306A\u3093\u304B\u306F\u3063\u304D\u308A\u3057\u305F\u7279\u5FB4\u306F\u306A\u304B\u3063\u305F\u304B\uFF1F\u4F8B\u3048\u3070\u30A8\u30F3\u30D6\u30EC\u30E0\u3068\u304B\u30FB\u30FB\u30FB"
-    text: []
-    image: []
-    answer_num: 0
-    clear_txet: 
-    over_txet: 
-  - question_text: 
-    text: []
-    image: []
-    answer_num: 0
-    clear_txet: 
-    over_txet: 
-  - question_text: 
-    text: []
-    image: []
-    answer_num: 0
-    clear_txet: 
-    over_txet: 
-  - question_text: 
-    text: []
-    image: []
-    answer_num: 0
-    clear_txet: 
-    over_txet: 
---- !u!114 &1967254956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967254951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9b39cc1387e55b4584813a52ac4fdef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originObj: {fileID: 2020644447}
-  JhonPre: {fileID: 3497665216601560644, guid: f5dd10f9553497a40b3f9317fccccefe, type: 3}
-  YouPre: {fileID: 2463470630637279459, guid: 76ea1b85b2497c24abc2c9c205f4ca16, type: 3}
-  AnswerPre: {fileID: 7287955128341799722, guid: 474126002b6b8814f8848d51157007d5,
-    type: 3}
-  NextButtonPre: {fileID: 293311997821260276, guid: 75597282311f3b74eb253defaf5f7716,
-    type: 3}
-  JhonPos: {x: -45, y: -60, z: 0}
-  YouPos: {x: -45, y: -120, z: 0}
-  AnswerPos: {x: 150, y: -270, z: 0}
-  NextButtonPos: {x: 400, y: -400, z: 0}
-  novelSpeed: 0.1
-  Tmp_Jhon_chat: {fileID: 0}
-  Tmp_You_chat: {fileID: 0}
-  Tmp_select: {fileID: 0}
---- !u!114 &1967254957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967254951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c03421323e2bc244b03b606177db36c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  question_root: []
-  makeChat: {fileID: 0}
-  moovSpeed: 1
-  now_status: 0
-  players_answer: 0
-  count: 0
-  nextchat_count_time: 1
---- !u!114 &1967254958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967254951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c57c574ae14979458faf53895d6f591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  now_screen: {fileID: 0}
-  screen_pos: {x: 3000, y: 3000}
 --- !u!1 &2020644446
 GameObject:
   m_ObjectHideFlags: 0

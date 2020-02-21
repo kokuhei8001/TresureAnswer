@@ -7,8 +7,8 @@ public class TestMana : MonoBehaviour
 {
     private void Start()
     {
-        ChatMooving chatMoov = GetComponent<ChatMooving>();
+        MakeEndChat end = GetComponent<MakeEndChat>();
 
-        chatMoov.Next();
+        StartCoroutine(end.makechat(end.chat_list[0].name , end.chat_list[0].text));
     }
 }

@@ -592,6 +592,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: "(\u30B5\u30D6\u30C7\u30A3\u30EC\u30AF\u30BF\u30FC)\nYata"
       objectReference: {fileID: 0}
+    - target: {fileID: 7693683993426867533, guid: d77cd606aa71d0f4bbf3e90e46fb86ca,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u30C9M\u306E\u5909\u614B\u3067\u3059\u307F\u307E\u305B\u3093\u3002\u8E0F\u3080\u3068\u304D\u306F\u8D64\u3044\u30D4\u30F3\u30D2\u30FC\u30EB\u3067\u304A\u9858\u3044\u3057\u307E\u3059\u3002"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77cd606aa71d0f4bbf3e90e46fb86ca, type: 3}
 --- !u!1001 &327204858
@@ -1172,6 +1177,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: "(UI\u30D7\u30ED\u30B0\u30E9\u30DE\u30FC)\nWakitani"
       objectReference: {fileID: 0}
+    - target: {fileID: 7693683993426867533, guid: d77cd606aa71d0f4bbf3e90e46fb86ca,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u5C06\u6765\u306F\u6795\u3068\u7D50\u5A5A\u3057\u305F\u3044\u3002\n\u3067\u3082\u3042\u3044\u3064\u2026\u8AB0\u3068\u3067\u3082\u30AD\u30B9\u3059\u308B\u3093\u3060\u3088\u306A\u2026"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77cd606aa71d0f4bbf3e90e46fb86ca, type: 3}
 --- !u!1001 &856450539
@@ -1295,6 +1305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "(\u30C4\u30FC\u30EB\u30D7\u30ED\u30B0\u30E9\u30DE\u30FC)\nKokubu"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693683993426867533, guid: d77cd606aa71d0f4bbf3e90e46fb86ca,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u5C06\u6765\u30AA\u30D5\u30C8\u30F3\u3068\u7D50\u5A5A\u3057\u305F\u3044\u3067\u3059\u3002\n\u3067\u3082\u3042\u3044\u3064\u2026\u8AB0\u3068\u3067\u3082\u5BDD\u308B\u3093\u3060\u3088\u306A\u2026"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77cd606aa71d0f4bbf3e90e46fb86ca, type: 3}
@@ -2801,6 +2816,7 @@ MonoBehaviour:
   screen_pos: {x: 1000, y: 1000}
   Scene1: Root1
   Scene2: Root2
+  Scene3: Ideling
 --- !u!114 &1725518244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2813,19 +2829,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8cd5c7042a02d47bbf590c817a235e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chatPre: {fileID: 5351857753269185826, guid: 65346447d03e132469896e8e5065b26b, type: 3}
+  chatPre: {fileID: 641071929914039520, guid: eeb6947cc246f0246be04b63cc87814b, type: 3}
   parent: {fileID: 1421092940}
   chat_list:
-  - name: AAA
-    text: "\u306A\u3093\u3066\u3053\u3063\u305F\uFF01\uFF01"
-  - name: BBB
-    text: "\u4E16\u7D00\u306E\u5927\u767A\u898B\u3060\uFF01\uFF01"
-  - name: CCC
-    text: "\u541B\u306E\u304A\u304B\u3052\u3067\u898B\u3064\u3051\u308B\u3053\u3068\u304C\u3067\u304D\u305F\u3088"
-  - name: DDD
-    text: "\u3082\u3046\u30B3\u30E1\u30F3\u30C8\u304C"
-  - name: EEE
-    text: "\u601D\u3044\u3064\u304B\u306A\u3044\u3088"
+  - name: Kamizato
+    text: "\u79C1\u306E\u7814\u7A76\u304C\u5831\u308F\u308C\u307E\u3057\u305F\u3002"
+  - name: Wakitani
+    text: "\u306A\u304B\u306A\u304B\u30E4\u308B\u3084\u3093"
+  - name: Shirahama
+    text: "\u6700\u9AD8\u304B\uFF01\uFF01\uFF01"
+  - name: Iwamoto
+    text: "\u304A\u5B9D\u304C\u3042\u306A\u305F\u3092\u5F85\u3063\u3066\u3044\u308B\uFF01\uFF01"
+  - name: Kokubu
+    text: "\u50D5\u305F\u3061\u306E\u4E8B\u306F\u5DE6\u306E\u30EA\u30B9\u30C8\u3092\u30AF\u30EA\u30C3\u30AF\u3057\u3066\u307F\u3066\u306D"
+  - name: Yata
+    text: "\u3042\u306A\u305F\u306F\u547D\u306E\u6069\u4EBA\u3060\uFF01"
+  startPos: {x: -70, y: -100, z: 0}
+  kannkaku: -45
+  sound:
+  - {fileID: 8300000, guid: 764f059260558c94280363b95193d47e, type: 3}
+  - {fileID: 8300000, guid: 51522a6ff8edcee4d825c12f0ae04670, type: 3}
+  - {fileID: 8300000, guid: ae6007f67e3a3214387b2b785932213d, type: 3}
+  - {fileID: 8300000, guid: 36f4f4036dca87646a610487e8864072, type: 3}
+  - {fileID: 8300000, guid: ecc8f534dd93bfc419088790192deb50, type: 3}
+  - {fileID: 8300000, guid: 3df51d975d99d5e4a98112517c2fb2dc, type: 3}
 --- !u!114 &1725518245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2872,7 +2899,7 @@ MonoBehaviour:
   question_root: []
   makeChat: {fileID: 0}
   now_status: 0
-  page: 0
+  page: 4
   players_answer: 0
   count: 0
   nextchat_count_time: 1

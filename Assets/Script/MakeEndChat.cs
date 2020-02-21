@@ -8,19 +8,33 @@ public class MakeEndChat : MonoBehaviour
     [SerializeField] public GameObject chatPre;
     [SerializeField] public Transform parent;
     [SerializeField] public List<UserDate> chat_list = new List<UserDate>();
+    [SerializeField] private Vector3 startPos = new Vector3(0,0,0);
+    [SerializeField] private float kannkaku = -50;
+
+    [SerializeField] private AudioClip[] sound = null;
+
     private int count = 0;
-    private Vector3 prev_pos = new Vector3(50,-100,0);
+    private Vector3 prev_pos;
+
+    private GameManager gameManager = null;
+    private void Start()
+    {
+        prev_pos = startPos;
+        gameManager = GetComponent<GameManager>();
+    }
 
     public IEnumerator makechat(string name , string text)
     {
         GameObject chat = Instantiate(chatPre, transform.position, Quaternion.identity, parent);
-        chat.transform.localPosition = prev_pos + new Vector3(0,-50,0);
+        chat.transform.localPosition = prev_pos + new Vector3(0,kannkaku,0);
 
-        Text _name = chat.transform.Find("Name").GetComponent<Text>();
-        Text _text = chat.transform.Find("Text").GetComponent<Text>();
+        Text _name = chat.GetComponent<Text>();
+        Text _text = chat.transform.Find("Comment").GetComponent<Text>();
 
         _name.text = name;
         _text.text = "";
+
+        gameManager.AudioPlay(sound[count]);
 
         int messageCont = 0;
         while (text.Length > messageCont)

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 //回答のボタンに付けられるコンポーネント
 public class Answer_button : MonoBehaviour
 {
-    [SerializeField] AudioClip Sound;
+    [SerializeField] AudioClip Sound = null;
     private MakeChat mana;
     private ChatMooving chatMoov;
     [HideInInspector] public string Answer;

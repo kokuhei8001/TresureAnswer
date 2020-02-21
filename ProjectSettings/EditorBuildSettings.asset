@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Root2.unity
     guid: 3105c9a29c33dd247ac17427631c5387
+  - enabled: 1
+    path: Assets/Scenes/Ideling.unity
+    guid: 82fda93071bba7444ba9de0fbe1498e1
   m_configObjects: {}

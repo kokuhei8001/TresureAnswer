@@ -94,7 +94,7 @@ public class MakeChat : MonoBehaviour
     public void MakeClearImage()
     {
         var obj = Instantiate(ClearImage, transform.position, Quaternion.identity, originObj);
-        obj.transform.localPosition = new Vector3(150, -250, 0);
+        obj.transform.localPosition = new Vector3(350, -225, 0);
         GameObject.Find("GameManager").GetComponent<AudioSource>().PlayOneShot(ClearSound);
     }
 

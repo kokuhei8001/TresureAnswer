@@ -34,8 +34,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         chatMoov = transform.GetComponent<ChatMooving>();
-        chatMoov.Next();
-
+        if (chatMoov != null)
+        {
+            chatMoov.Next();
+        }
         audioSouce = GetComponent<AudioSource>();
     }
 
@@ -44,6 +46,8 @@ public class GameManager : MonoBehaviour
     private string Scene1 = null;
     [SerializeField]
     private string Scene2 = null;
+    [SerializeField]
+    private string Scene3 = null;
 
     private void Update()
     {
@@ -59,6 +63,13 @@ public class GameManager : MonoBehaviour
             if (Scene2 != null)
             {
                 SceneManager.LoadScene(Scene2);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if (Scene3 != null)
+            {
+                SceneManager.LoadScene(Scene3);
             }
         }
     }

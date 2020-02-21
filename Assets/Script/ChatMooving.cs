@@ -58,6 +58,9 @@ public class ChatMooving : MonoBehaviour
 
                     if (page == question_root.Count - 1)
                     {
+                        MakeEndChat end = GetComponent<MakeEndChat>();
+                        StartCoroutine(end.makechat(end.chat_list[0].name, end.chat_list[0].text));
+
                         makeChat.MakeClearImage();
                     }
                     clear_count++;
