@@ -908,4 +908,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Root1.unity
   - Assets/Scenes/Ideling.unity
   - Assets/Scenes/Root2.unity
-  playerPath: C:/Users/kokuhei/Desktop/TresureAnswer.exe
+  playerPath: "C:/Users/kokuhei/Desktop/\u56DE\u7B54\u90E8\u5206/TresureAnswer.exe"

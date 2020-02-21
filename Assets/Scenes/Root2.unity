@@ -2983,12 +2983,12 @@ MonoBehaviour:
     text:
     - "\u30C8\u30E9\u30D0\u30B5\u30DF\u304C\u3042\u3063\u305F\u3002\u8DB3\u5143\u306B\u6CE8\u610F\u3057\u308D\u3002"
     - "\u52D5\u304F\u58C1\u304C\u8972\u3063\u3066\u304D\u305F\u3002\u3080\u3084\u307F\u306B\u89E6\u308C\u308B\u306A"
-    - "\u5927\u304D\u306A\u6249\u304C\u3042\u3063\u305F\u3002\u30B9\u30A4\u30C3\u30C1\u3067\u958B\u304F\u305E\u3002"
+    - "\u9244\u7403\u304C\u964D\u3063\u3066\u304D\u305F\u3002\u4E0A\u306B\u6C17\u3092\u4ED8\u3051\u308D\u3002"
     - "\u4F55\u3082\u306A\u304B\u3063\u305F\u3002\u5B89\u5FC3\u3057\u3066\u3044\u3051\u3002"
     image:
     - {fileID: 21300000, guid: 1b06f97d6370119409d67d7e6a83ac9f, type: 3}
     - {fileID: 21300000, guid: 934d063f9e2023049ae81e00e29e59ec, type: 3}
-    - {fileID: 21300000, guid: 845592396c95b2b4ba8be6e047540393, type: 3}
+    - {fileID: 21300000, guid: a8cc06bf2e0a3c742b5b3d9673e1fc0e, type: 3}
     - {fileID: 21300000, guid: 0a08d746722bef0428a0243484f7756a, type: 3}
     answer_num: 1
     clear_txet: "\u5371\u306A\u304B\u3063\u305F\u3001\u541B\u306E\u52A9\u8A00\u304C\u306A\u3051\u308C\u3070\u9AA8\u3092\uFF12\uFF5E\uFF13\u672C\u6301\u3063\u3066\u3044\u304B\u308C\u308B\u3068\u3053\u308D\u3060\u3063\u305F\u3088\u3002"
@@ -3011,12 +3011,12 @@ MonoBehaviour:
     text:
     - "\u8D64\u3044\u9271\u77F3"
     - "\u7DD1\u8272\u306E\u5316\u77F3"
-    - "\u9752\u3044\u5CA9"
+    - "\u9752\u3044\u82B1"
     - "\u9EC4\u8272\u306E\u67F1"
     image:
     - {fileID: 21300000, guid: f3de2f820004fd0488a8c0ff2d767ba4, type: 3}
     - {fileID: 21300000, guid: d8a0363cf0102e8459240f6af91569f3, type: 3}
-    - {fileID: 21300000, guid: 59bf3e28272ea0b4ebd40b316b82a4ae, type: 3}
+    - {fileID: 21300000, guid: 3cffcc28edce07648ac58d53b2f28e16, type: 3}
     - {fileID: 21300000, guid: b92894592605e964ca25a85c58670659, type: 3}
     answer_num: 1
     clear_txet: "\u7D20\u6674\u3089\u3057\u3044\uFF01\u76EE\u7684\u306E\u5B9D\u307E\u3067\u3082\u3046\u5C11\u3057\u3060\u306A\uFF01"
