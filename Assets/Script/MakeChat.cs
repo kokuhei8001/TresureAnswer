@@ -101,9 +101,8 @@ public class MakeChat : MonoBehaviour
     public void MakeNormalChat(string _text)
     {
         var obj = Instantiate(ChatPre , transform.position , Quaternion.identity , originObj);
-        obj.transform.localPosition = new Vector3(250, -400, 0);
+        obj.transform.localPosition = new Vector3(200, -400, 0);
 
-        obj.transform.Find("Name").GetComponent<Text>().text = "";
         obj.transform.Find("Text").GetComponent<Text>().text = _text;
     }
 }

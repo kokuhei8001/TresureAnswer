@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 132, y: -63}
+  m_AnchoredPosition: {x: 132, y: -61}
   m_SizeDelta: {x: 186.61, y: 86.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7362375572951037806
@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08aa986c57050424e83a05b7efd0c95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sound: {fileID: 8300000, guid: 457390cf741e09a4c922aa10a8f1e4e7, type: 3}
   Answer: 
   answer_num: 0
 --- !u!1 &2778668332364687099
@@ -182,7 +183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -86, y: -63}
+  m_AnchoredPosition: {x: -86, y: -61}
   m_SizeDelta: {x: 186.61, y: 86.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1282854908396781506
@@ -290,6 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08aa986c57050424e83a05b7efd0c95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sound: {fileID: 8300000, guid: 457390cf741e09a4c922aa10a8f1e4e7, type: 3}
   Answer: 
   answer_num: 0
 --- !u!1 &5959996617111014959
@@ -328,8 +330,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 224, y: -140.86}
-  m_SizeDelta: {x: 142.7, y: 69.1}
+  m_AnchoredPosition: {x: 220.55, y: -139}
+  m_SizeDelta: {x: 114.7, y: 55.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8906511256345161318
 CanvasRenderer:
@@ -473,7 +475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 132, y: 40.690002}
+  m_AnchoredPosition: {x: 132, y: 42.690002}
   m_SizeDelta: {x: 186.61, y: 86.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6273546700669478233
@@ -581,6 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08aa986c57050424e83a05b7efd0c95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sound: {fileID: 8300000, guid: 457390cf741e09a4c922aa10a8f1e4e7, type: 3}
   Answer: 
   answer_num: 0
 --- !u!1 &7287955128341799722
@@ -622,8 +625,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: -100}
-  m_SizeDelta: {x: 613.1, y: 298.45}
+  m_AnchoredPosition: {x: 178.6, y: -87.2}
+  m_SizeDelta: {x: 555.8, y: 272.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4666997066122641371
 CanvasRenderer:
@@ -698,7 +701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -86, y: 40.69}
+  m_AnchoredPosition: {x: -86, y: 42.69}
   m_SizeDelta: {x: 186.61, y: 86.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1802407197315166519
@@ -806,5 +809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08aa986c57050424e83a05b7efd0c95f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sound: {fileID: 8300000, guid: 457390cf741e09a4c922aa10a8f1e4e7, type: 3}
   Answer: 
   answer_num: 0

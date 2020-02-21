@@ -80,7 +80,7 @@ public class ChatMooving : MonoBehaviour
                 else
                 {
                     float count = (float)clear_count / (float)question_root.Count * 100;
-                    makeChat.MakeNormalChat("君の正解率は" + count + "％だ。");
+                    makeChat.MakeNormalChat("君の解読率は " + count + " ％だ。");
                 }
 
                 now_status = Status.None;

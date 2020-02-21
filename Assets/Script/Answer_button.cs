@@ -6,11 +6,14 @@ using UnityEngine.UI;
 //回答のボタンに付けられるコンポーネント
 public class Answer_button : MonoBehaviour
 {
+    [SerializeField] AudioClip Sound;
     private MakeChat mana;
     private ChatMooving chatMoov;
-    public string Answer;
+    [HideInInspector] public string Answer;
 
     public int answer_num;
+
+    private GameManager manager;
 
     private void Start()
     {
@@ -18,14 +21,16 @@ public class Answer_button : MonoBehaviour
         {
             mana = GameObject.Find("GameManager").GetComponent<MakeChat>();
         }
-        else { Debug.Log("TestManaがありませんでした。"); }
-
+        else { Debug.Log("MakeChatがありませんでした。"); }
 
         chatMoov = GameObject.Find("GameManager").GetComponent<ChatMooving>();
+        manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
     }
 
     public void OnClick()
     {
+        manager.AudioPlay(Sound);
         if (mana != null) { mana.MakeYOUChat(Answer); }
         chatMoov.players_answer = answer_num;
     }
