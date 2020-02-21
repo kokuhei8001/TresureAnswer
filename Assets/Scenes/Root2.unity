@@ -3000,10 +3000,10 @@ MonoBehaviour:
     - "\u880D\u5EA7"
     - "\u87F9\u5EA7"
     image:
-    - {fileID: 21300000, guid: 1a6b75056985cd94b9526dd63a8b00e9, type: 3}
-    - {fileID: 21300000, guid: 8f89d3886812df54c8b1b4403a17faa6, type: 3}
-    - {fileID: 21300000, guid: a22954dcd167a8743a5b49dafc55eb66, type: 3}
-    - {fileID: 21300000, guid: 68dbe2f5dde32b945ba379f55f3b6de6, type: 3}
+    - {fileID: 21300000, guid: a78c6e5b1fc6d994590bcda1d1302ea6, type: 3}
+    - {fileID: 21300000, guid: 50bf22cb3fd3cfa4b85e469abf0ca4b9, type: 3}
+    - {fileID: 21300000, guid: bbf2081f5de96f54fb4cd8bb83496f9e, type: 3}
+    - {fileID: 21300000, guid: da37f69c305f8364293107e4d873bfe5, type: 3}
     answer_num: 0
     clear_txet: "\u541B\u306E\u8A00\u3063\u305F\u3068\u304A\u308A\u3060\uFF01\u30C9\u30AD\u30C9\u30AD\u3057\u3066\u80F8\u9AA8\u304C\u9AD8\u9CF4\u3063\u3066\u3044\u308B\u3088\u3002"
     over_txet: "\u3053\u308C\u306F\u30FB\u30FB\u30FB\u307E\u3041\u3001\u4E07\u80FD\u306A\u4EBA\u9593\u306A\u3069\u3044\u306A\u3044\u304B\u3089\u306A\u3002\u661F\u5EA7\u3092\u77E5\u3089\u306A\u304F\u3066\u3082\u5927\u4E08\u592B\u3060\u3002"
